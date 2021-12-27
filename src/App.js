@@ -2,7 +2,7 @@
 
 function App() {
   return (
-   <div>HI</div>
+   <div>Welcome to farmaayish website</div>
   );
 }
 
