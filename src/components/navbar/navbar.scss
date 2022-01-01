@@ -1,0 +1,45 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+    padding: 2rem 5rem;
+    // border-bottom: 1.333px solid #7a7a7a;
+    position: fixed;
+    z-index: 100;
+    transition: background-color 0.4s ease-out, height 0.4s ease-out;
+    
+    &.active{
+        background-color: #FFFCF4;
+        height: 10vh;
+    }
+
+    .logo{
+        font-family: 'Cinzel Decorative', cursive;
+        font-weight: 700;
+        color: white;
+        letter-spacing: 0.09em;
+
+        &.active{
+            color: black;
+        }
+    }
+
+    .links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        a{
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            margin-left: 2rem;
+            color: white;
+
+            &.active{
+                color: black;
+            }
+        }
+    }
+}

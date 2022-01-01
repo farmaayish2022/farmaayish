@@ -1,0 +1,34 @@
+.features{
+    padding: 2rem 4rem;
+    display: flex;
+    background-color: #FFFCF4;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 30vh;
+
+    .feature-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        .feature-icon{
+            width: 1.5em;
+        }
+
+        h4{
+            font-weight: 500;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        p{
+            font-family: 'Lustria', serif;
+            letter-spacing: 0.03em;
+        }
+    }
+
+
+}

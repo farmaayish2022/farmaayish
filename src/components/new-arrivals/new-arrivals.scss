@@ -1,0 +1,39 @@
+.new-arrivals{
+    width: 100vw;
+    height: 90vh;
+    background-color: #FFFCF4;
+    padding: 1rem 5rem;
+    display: flex;
+    flex-direction: column;
+
+    .headings{
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            font-size: 2.8em;
+            letter-spacing: 0.07em;
+            margin-top: 0.05em;
+            font-weight: 600;
+        }
+    }
+
+    .items{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+
+        .categories{
+            display: flex;
+
+            p{
+                font-size: 1.2em;
+                font-family: 'Lustria', serif;
+                margin-right: 1rem;
+                letter-spacing: 0.1;
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,74 @@
+.hero-section{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+
+
+    .hero-img {
+        width: 100%;
+        height: 100%;
+        background-image: url("https://i.ibb.co/hCY5szQ/Hero-section-bg.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 25%;
+        left: 7% ;
+        z-index: 2;
+        color: white;
+
+        .title{
+            font-family: 'Noto Serif Display', serif;
+            font-style: italic;
+            font-size: 5em;
+            letter-spacing: 0.025em;
+        }
+
+        p{
+            font-weight: 300;
+            font-size: 1.2em;
+            color: #FFF3CE;
+            margin-top: 2rem;
+        }
+    }
+
+    .discover{
+        font-weight: 400;
+        color: white;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        bottom: 1em;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p{
+            font-size: 1.1em;
+            font-weight: 400;
+            // letter-spacing: 0.025em;
+        }
+
+        .discover-icon{
+            width: 2em;
+            animation: scroll 1s ease-in-out 1s infinite alternate;
+        }
+
+        @keyframes scroll {
+            to{
+                color: #ffae00;
+                transform: translate(0px, 9px);
+            }
+        }
+    }
+}
+
