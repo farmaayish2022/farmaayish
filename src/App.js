@@ -8,6 +8,8 @@ import ContactPage from "./pages/Contact/contact";
 import CollectionsPage from "./pages/Collections/collections";
 import AboutPage from "./pages/About/about";
 import ProductItem from "./components/productItem/productItem";
+import CategoryItem from "./components/categoryItem/categoryItem";
+import Loader from "./components/loader/loader";
 
 function App() {
 
@@ -21,12 +23,13 @@ function App() {
 
   return (
     <>
-    {loading ? <div>Loading...</div> : <>
+    {loading ? <Loader/> : <>
       <Navbar/>
       <Routes>
         <Route path="/" element = {<HomePage/>} />
         <Route path="/eshop" element = {<EshopPage/>} />
-        <Route path="/eshop/:categoryId/:productId" element={<ProductItem/>}   />
+        <Route path="/eshop/:categoryId/:productId" element={<ProductItem/>} />
+        <Route path="/eshop/:categoryId" element={<CategoryItem/>} />
         <Route path="/contact" element = {<ContactPage/>} />
         <Route path="/about" element = {<AboutPage/>} />
         <Route path="/collections" element = {<CollectionsPage/>} />

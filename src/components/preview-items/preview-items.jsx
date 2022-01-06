@@ -14,7 +14,7 @@ SwiperCore.use([Pagination]);
 const ItemsPreview = ({title,items}) => {
     return(
         <div className="item-preview">
-            <h2>{title}</h2>
+            <Link to={`/eshop/${title}`}><h2>{title}</h2></Link>
             <div className="preview">
                 <Swiper slidesPerView={4} spaceBetween={30} pagination={{"clickable": true, type: 'bullets'}} breakpoints={{"200": {"slidesPerView": 1,"spaceBetween": 50},"420": {"slidesPerView": 1,"spaceBetween": 50},"640": {"slidesPerView": 2,"spaceBetween": 50},"768": {"slidesPerView": 3,"spaceBetween": 55},"1024": {"slidesPerView": 4,"spaceBetween": 30}}} className="mySwiper">
                     {items.map(item => (

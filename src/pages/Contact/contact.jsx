@@ -1,10 +1,12 @@
 import React from "react"
 
-import ProductItem from "../../components/productItem/productItem"
+import './contact.scss'
 
 const ContactPage = () => {
+
     return(
         <>
+        <h1>Contact Page</h1>
         </>
         
     )

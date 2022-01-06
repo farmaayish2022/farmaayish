@@ -1,0 +1,59 @@
+.collection1{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    padding: 2rem 5rem;
+
+    .harmony{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .harmony-text{
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%,-10%);
+            color: white;
+            text-align: center;
+            h1{
+                font-family: 'Della Respira', serif;
+                font-weight: 300;
+                font-size: 4rem;
+                letter-spacing: 0.09em;
+            }
+        }
+    }
+     .mystique{
+         position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+        .mystique-text{
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%,-10%);
+            color: white;
+            text-align: center;
+            h1{
+                font-family: 'Della Respira', serif;
+                font-weight: 300;
+                font-size: 4rem;
+                letter-spacing: 0.09em;
+            }
+        }
+    }
+}
