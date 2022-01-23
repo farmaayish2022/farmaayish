@@ -4,9 +4,7 @@ import { useParams,Link} from "react-router-dom";
 import './categoryItem.scss'
 
 import ItemCard from "../item-card/item-card";
-import FeaturesSection from "../features/features";
 import SHOP_DATA from "../../data";
-
 
 const CategoryItem = () => {
     const params = useParams()

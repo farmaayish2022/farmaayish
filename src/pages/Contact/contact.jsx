@@ -1,14 +1,11 @@
 import React from "react"
 
-import './contact.scss'
+import Contact from "../../components/contact-us/contact-us"
 
 const ContactPage = () => {
 
     return(
-        <>
-        <h1>Contact Page</h1>
-        </>
-        
+       <Contact/>   
     )
 }
 

@@ -17,7 +17,7 @@ const Navbar = () => {
 
     useEffect (() => {
 
-        if(pathname=='/' || pathname=='/about'){
+        if(pathname=='/' || pathname=='/about' || pathname=='/contact'){
             window.addEventListener('scroll', changeBackground)
             setNavbar(false)
         }
