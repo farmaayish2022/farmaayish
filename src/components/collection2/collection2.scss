@@ -38,7 +38,7 @@
                 object-fit: cover;
                 margin: 0;
                 filter: grayscale(90%);
-                transform: filter 1s cubic-bezier(0.68,-0.55,0.27,1.55);
+                transition: filter 0.6s cubic-bezier(0.68,-0.55,0.27,1.55);
                 &:hover{
                     filter: grayscale(0);
                 }
@@ -56,5 +56,38 @@
             }
         }
 
+    }
+}
+
+@media screen and (max-width: 991px){
+    .collection2{
+        height: 60vh;
+        padding: 1rem 3rem;
+        .collections{
+            .collection{
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 640px){
+    .collection2{
+        height: 80vh;
+        .collections{
+            flex-direction: column;
+            .collection{
+                margin-right: 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .collection2{
+        h1{
+            font-size: 1.8rem;
+        }
+        padding: 1rem 2rem;
     }
 }

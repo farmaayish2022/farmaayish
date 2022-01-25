@@ -5,7 +5,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100vw;
-    height: 30vh;
+    height: 100%;
 
     .feature-item{
         display: flex;
@@ -31,4 +31,36 @@
     }
 
 
+}
+
+@media screen and (max-width: 991px) {
+    .features{
+        padding: 0.5rem 5rem;
+        .feature-item{
+            .feature-icon{
+                width: 1em;
+            }
+            h4{
+                font-size: 80%;
+            }
+            p{
+                font-size: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .features{
+        flex-direction: column;
+        .feature-item{
+            .feature-icon{
+                margin-top: 1rem;
+            }
+            h4{
+                margin-top: 0.6rem;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
 }

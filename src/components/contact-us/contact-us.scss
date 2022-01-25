@@ -70,7 +70,7 @@
             color: white;
             outline: none;
             border: none;
-            width: 10vw;
+            width: 15vw;
             height: 5vh;
             background: rgba($color: #fff, $alpha: 0);
             font-family: 'Poppins', sans-serif;
@@ -84,5 +84,66 @@
                 border-bottom: 1px solid white ;
             }
         }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .contact{
+        .contact-form{
+            form{
+                grid-template-columns: repeat(1,1fr);
+                grid-gap: 1rem;
+                .text-input{
+                    padding: 0.6rem;
+                    label{
+                        font-size: 1rem;
+                        margin-bottom: 0.6rem;
+                    }
+                }
+            }
+        }
+   
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact{
+        .contact-form{
+            form{
+                grid-template-columns: repeat(1,1fr);
+                grid-gap: 0.4rem;
+                .text-input{
+                    padding: 1rem;
+                    label{
+                        font-size: 1rem;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+            button{
+                font-size: 0.8rem;
+            }
+        }
+   
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .contact{
+        .contact-form{
+            form{
+                grid-template-columns: repeat(1,1fr);
+                grid-gap: 1.2rem;
+                .text-input{
+                    padding: 0.7rem;
+                    label{
+                        font-size: 0.7rem;
+                        margin-bottom: 0.8rem;
+                    }
+                }
+            }
+            
+        }
+   
     }
 }

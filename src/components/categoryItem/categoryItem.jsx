@@ -25,7 +25,6 @@ const CategoryItem = () => {
     },[params.categoryId])
 
     return(
-
         <div className="category-page">
             <h1>{categoryName}</h1>
             <div className="other-category-names">
@@ -40,9 +39,9 @@ const CategoryItem = () => {
                         <p key={item.name}>{item.name}</p>
                     </div>      
                 ))}
-            </div>      
+            </div>
         </div>
-    
+        
     )
 }
 

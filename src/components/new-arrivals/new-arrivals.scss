@@ -1,6 +1,6 @@
 .new-arrivals{
     width: 100vw;
-    height: 90vh;
+    height: 90%;
     background-color: #FFFCF4;
     padding: 1rem 5rem;
     display: flex;
@@ -80,4 +80,66 @@
         }
     }
 
+}
+
+@media screen and (max-width: 991px){
+    .new-arrivals{
+        height: 60%;
+        padding: 1rem 3rem;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .new-arrivals{
+        .items{
+            margin-top: 1rem;
+            .categories{
+                p{
+                    font-size: 1em;
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px){
+    .new-arrivals{
+        padding: 1rem 2rem;
+        .headings{
+            h1{
+                font-size: 2em;
+            }
+            p{
+                font-size: 0.8rem;
+            }
+        }
+        .items{
+            .categories{
+                p{
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 380px){
+    .new-arrivals{
+        .headings{
+            h1{
+                font-size: 1.8em;
+            }
+            p{
+                font-size: 0.7rem;
+            }
+        }
+        .items{
+            .categories{
+                p{
+                    font-size: 0.7em;
+                }
+            }
+        }
+    }
 }

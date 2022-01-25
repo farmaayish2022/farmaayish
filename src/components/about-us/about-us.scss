@@ -32,6 +32,7 @@
             top: 40%;
             transform: translate(-50%,-40%);
             z-index: 2;
+            text-align: center;
           }
 
           .discover{
@@ -90,9 +91,6 @@
         font-size: 1.1em;
         color: #858585;
       }
-
-
-
     }
 
     .about-us-value{
@@ -108,10 +106,11 @@
         letter-spacing: 0.15em;
         color: rgb(255, 255, 255);
         position: absolute;
-        top: 2rem;
+        top: 10%;
         left: 50%;
         transform: translate(-50%);
         z-index: 5;
+        text-align: center;
       }
 
       .value-content{
@@ -172,17 +171,18 @@
       }
 
       .packaging-img{
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 60%;
         background-image: url('https://i.ibb.co/3fSrbFZ/Packaging-wide.webp');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        margin: 1.5rem 0;
-        transition: all 1s ease-out;
+        margin: 1.2rem 0;
+        transition: all 0.2s ease-out;
+        transform: scale(0.8);
 
         &:hover{
-          transform: scale(0.8);
+          transform: scale(1);
           filter: saturate(150%);
         }
       }
@@ -199,4 +199,86 @@
       }
 
     }
+}
+
+@media screen and (max-width: 991px) {
+ .about-us{
+  .about-us-info{
+    height: 60vh;
+    p:first-child{
+      font-size: 1em;
+    }
+  }
+  .about-us-packaging{
+    height: 100vh;
+    .packaging-img{
+      height: 50%;
+    }
+    h1{
+      font-size: 1.5em;
+    }
+    p{
+      text-align: left;
+      font-size: 1em;
+    }
+  }
+  .about-us-value{
+    h1{
+      font-size: 2.2em;
+    }
+    .value-text{
+      p{
+        font-size: 1em;
+        line-height: 2.7;
+      }
+    }
+  }
+ }
+}
+
+@media screen and (max-width: 480px){
+  .about-us{
+    .about-us-hero-section{
+      h1{
+        font-size: 3em;
+      }
+    }
+    .about-us-info{
+      p:first-child{
+        font-size: 0.8em;
+        line-height: 2;
+        text-align: left;
+      }
+      h1{
+        font-size: 2em;
+      }
+      .subheading{
+        font-size: 0.8em;
+      }
+    }
+    .about-us-packaging{
+      height: 80vh;
+      h1{
+        font-size: 1em;
+      }
+      p{
+        font-size: 0.7em;
+      }
+    }
+    .about-us-value{
+      h1{
+        text-shadow: 5px 3px 13px rgba(49, 49, 49, 0.8);
+        line-height: 1.2;
+      }
+      .value-content{
+        flex-direction: column;
+      }
+      .value-text{
+        p{
+          font-size: 0.8em;
+          line-height: 2.2;
+        }
+      }
+    }
+  }
 }

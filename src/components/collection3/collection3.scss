@@ -16,6 +16,7 @@
         transform: translate(-50%,-50%);
         z-index: 5;
         color: white;
+        text-align: center;
     }
 
     .picture{
@@ -30,5 +31,29 @@
             display: block;
             object-fit: cover;
         }
+    }
+}
+
+@media screen and (max-width: 991px){
+    .collection3{
+        height: 60vh;
+        padding: 1rem 3rem;
+        h1{
+            font-size: 4rem;
+        }
+    }
+}
+@media screen and (max-width: 640px){
+    .collection3{
+        height: 80vh;
+        flex-direction: column;
+        h1{
+            font-size: 2rem;
+        }
+    }
+}
+@media screen and (max-width: 480px){
+    .collection3{
+        padding: 1rem 2rem;
     }
 }

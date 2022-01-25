@@ -76,3 +76,31 @@
         }
     }
 }
+
+@media screen and (max-width: 991px){
+    .category-page{
+        .category-images{
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 2rem;
+        }
+    } 
+}
+
+@media screen and (max-width: 500px){
+    .category-page{
+        padding: 1rem 3rem;
+        .category-images{
+            grid-template-columns: repeat(1,1fr);
+            grid-gap: 1rem;
+        }
+        .other-category-names{
+            p{
+                margin-right: 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+        h1{
+            font-size: 2em;
+        }
+    }
+}

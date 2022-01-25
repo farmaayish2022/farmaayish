@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import './about-us.scss'
 
 import FeaturesSection from "../features/features";
 
 const AboutUs = () => {
-return( 
+    const [offsetY, setOffsetY] = useState(0)
+    const handleScroll = () => setOffsetY(window.pageYOffset)
+
+    useEffect(() => {
+        window.addEventListener('scroll',handleScroll)
+        return () => window.removeEventListener('scroll',handleScroll) 
+    },[])
+
+    return( 
     <>
     <section className="about-us">
-        <section className="about-us-hero-section">
+        <section className="about-us-hero-section" style={{transform: `translateY(-${offsetY*0.9}px)`}}>
 
             <div className="about-us-hero-img"></div> 
 
@@ -59,7 +67,7 @@ return(
     <FeaturesSection/>
     </>
     
-)
+    )
     
 }
 

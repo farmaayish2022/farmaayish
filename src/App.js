@@ -9,6 +9,7 @@ import CollectionsPage from "./pages/Collections/collections";
 import AboutPage from "./pages/About/about";
 import ProductItem from "./components/productItem/productItem";
 import CategoryItem from "./components/categoryItem/categoryItem";
+import FeaturesSection from "./components/features/features";
 import Loader from "./components/loader/loader";
 
 function App() {
