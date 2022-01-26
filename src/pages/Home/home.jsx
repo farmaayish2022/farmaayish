@@ -11,13 +11,12 @@ const HomePage = () => {
     return(
         <>
             <HeroSection/>
-            <NewArrivals/>
-            <Collection1/>
-            <Collection2/>
-            <Collection3/>
-            <FeaturesSection/>
-        </>
-        
+            <NewArrivals />
+            <Collection1 />
+            <Collection2 />
+            <Collection3 />
+            <FeaturesSection />
+        </>  
     )
 }
 

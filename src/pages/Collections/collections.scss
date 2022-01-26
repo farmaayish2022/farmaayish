@@ -53,3 +53,28 @@
         filter: blur(3rem) opacity(30%);
     }
 }
+
+.background {
+    background: linear-gradient(270deg, #a73f07, #524a42);
+    background-size: 400% 400%;
+
+    -webkit-animation: backgroundGradient 5s ease infinite;
+    -moz-animation: backgroundGradient 5s ease infinite;
+    animation: backgroundGradient 5s ease infinite;
+}
+
+@-webkit-keyframes backgroundGradient {
+    0%{background-position:0% 84%}
+    50%{background-position:100% 17%}
+    100%{background-position:0% 84%}
+}
+@-moz-keyframes backgroundGradient {
+    0%{background-position:0% 84%}
+    50%{background-position:100% 17%}
+    100%{background-position:0% 84%}
+}
+@keyframes backgroundGradient {
+    0%{background-position:0% 84%}
+    50%{background-position:100% 17%}
+    100%{background-position:0% 84%}
+}

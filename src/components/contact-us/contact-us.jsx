@@ -1,9 +1,14 @@
-import React from "react";
-import {ChevronRightIcon} from '@heroicons/react/outline'
+import React,{useLayoutEffect} from "react";
+import { gsap,Power3 } from "gsap";
 
 import './contact-us.scss'
 
 const Contact = () => {
+    let tl = new gsap.timeline()
+    useLayoutEffect(()=>{
+        tl.from('.contact-img',2,{opacity: 0,scale:5 ,ease: Power3.easeOut },0.5)
+        .from('.text-input',1,{x: 200, opacity: 0,ease: Power3.easeOut })
+    },[])
     return(
         <>
             <div className="contact">

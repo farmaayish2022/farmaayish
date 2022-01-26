@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
+import { gsap,Power3 } from "gsap";
 
 import './about-us.scss'
 
@@ -7,10 +8,16 @@ import FeaturesSection from "../features/features";
 const AboutUs = () => {
     const [offsetY, setOffsetY] = useState(0)
     const handleScroll = () => setOffsetY(window.pageYOffset)
+    let tl = new gsap.timeline()
 
     useEffect(() => {
         window.addEventListener('scroll',handleScroll)
         return () => window.removeEventListener('scroll',handleScroll) 
+    },[])
+
+    useLayoutEffect(()=>{
+        tl.from('.about-us-hero-img',1,{y: 1000, opacity: 0,ease: Power3.easeOut })
+        .from('.hero-title',1,{x: 200, opacity: 0,ease: Power3.easeOut })
     },[])
 
     return( 
@@ -20,7 +27,7 @@ const AboutUs = () => {
 
             <div className="about-us-hero-img"></div> 
 
-            <h1>ABOUT US</h1>
+            <h1 className="hero-title">ABOUT US</h1>
 
             <div className="discover">
                 <p>DISCOVER</p>

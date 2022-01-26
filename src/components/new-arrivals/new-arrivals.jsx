@@ -21,7 +21,7 @@ const NewArrivals = () => {
     useEffect(() => {
 
         const getCategory = (category) => {
-            return category.title == categoryName
+            return category.title === categoryName
         }
 
         const details = SHOP_DATA.filter(getCategory)[0]

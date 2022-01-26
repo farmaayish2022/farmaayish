@@ -1,134 +1,158 @@
-.collection-showcase{
-    margin: auto;
+.static-elements{
     width: 100vw;
     height: 90vh;
-    z-index: 10;
     position: relative;
+    z-index: 10;
     top: 10vh;
 
-    .collection-category{
+    .bottom-links{
+        position: absolute;
+        bottom: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #FFD8BA;
         width: 100%;
-        height: 100%;
-        position: relative;
-
-        .image-frame{
-            width: 20rem;
-            height: 30rem;
-            overflow: hidden;
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translate(-50%,-40%);
-            -webkit-clip-path: inset(1px round 13rem 13rem 13rem 13rem);
-            clip-path: inset(1px round 13rem 13rem 13rem 13rem);
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .heading{
-            width: max-content;
-            color: #FFD8BA;
-            position: absolute;
-            left: 34%;
-            top: 45%;
-            transform: translate(-34%,-45%);
-            h1{
-                font-family: 'Cinzel Decorative', cursive;
-                font-size: 2.6rem;
-                font-weight: 400;
-                letter-spacing: 0.1em;
-            }
-            p{
-                font-family: 'Poppins', sans-serif;
-                font-size: 1.3rem;
-                font-weight: 300;
-                display: flex;
-                letter-spacing: 0.2em;
-                margin-left: 2rem;
-            }
-        }
-
-        .company-name{
-            position: absolute;
-            left: 32%;
-            top: 23%;
-            transform: translate(-32%,-23%);
-            color: #FFD8BA;
-            h4{
-                font-size: 0.8rem;
-                font-weight: 400;
-                letter-spacing: 0.1em;
-            }
-            p{
-                font-size: 0.7rem;
-                letter-spacing: 0.1em;
-            }
-        }
-
-        .category-name{
-            position: absolute;
-            left: 38%;
-            top: 75%;
-            transform: translate(-38%,-75%);
-            color: white;
-            h4{
-                font-size: 0.9rem;
-                font-weight: 400;
-                letter-spacing: 0.1em;
-            }
-            p{
-                font-size: 0.7rem;
-                letter-spacing: 0.1em;
-                font-weight: 200;
-                margin-top: 0.5rem;
-            }
-        }
-
-        .collection-brief{
-            position: absolute;
-            right: 27%;
-            bottom: 15%;
-            transform: translate(-27%,-15%);
-            color: white;
-            p{
-                font-size: 0.6rem;
-                letter-spacing: 0.1em;
-                font-weight: 200;
-                margin-top: 0.5rem;
-                line-height: 1.8;
-            }
-        }
-
-        .circle-svg{
-            position: absolute;
-            right: 38%;
-            top: 20%;
-            transform: translate(-38%,-20%);
-            width: 4rem;
+        padding: 0 5rem 0 5rem;
+        p{
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
             font-weight: 200;
-            animation: rotation 10s infinite linear;
         }
+    }
 
-        .bottom-links{
-            position: absolute;
-            bottom: 5%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #FFD8BA;
+    .company-name{
+        position: absolute;
+        left: 32%;
+        top: 23%;
+        transform: translate(-32%,-23%);
+        color: #FFD8BA;
+        z-index: 20;
+        overflow: hidden;
+        h4{
+            font-size: 0.8rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+        }
+        p{
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+        }
+    }
+
+    .circle-svg{
+        position: absolute;
+        right: 38%;
+        top: 20%;
+        transform: translate(-38%,-20%);
+        width: 4rem;
+        font-weight: 200;
+        animation: rotation 10s infinite linear;
+        z-index: 20;
+    }
+
+    .collection-showcase{
+        margin: auto;
+        width: 100%;
+        height: 100%;   
+        position: relative;    
+        // display: flex;
+        // overflow: hidden;
+    
+        .collection-category{
             width: 100%;
-            padding: 0 5rem 0 5rem;
-            p{
-                font-size: 0.8rem;
-                letter-spacing: 0.1em;
-                font-weight: 200;
+            height: 100%;
+            position: relative;
+            // flex-shrink: 0;
+    
+            .image-frame{
+                width: 20rem;
+                height: 30rem;
+                overflow: hidden;
+                position: absolute;
+                top: 40%;
+                left: 50%;
+                transform: translate(-50%,-40%);
+                -webkit-clip-path: inset(1px round 13rem 13rem 13rem 13rem);
+                clip-path: inset(1px round 13rem 13rem 13rem 13rem);
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                // .img2{
+                //     position: absolute;
+                //     left: 0;
+                //     top: 0;
+                // }
+                // &:hover{
+                //     .img2{
+                //         visibility: hidden;
+                //     }
+                // }
+            }
+    
+            .heading{
+                width: max-content;
+                color: #FFD8BA;
+                position: absolute;
+                left: 34%;
+                top: 45%;
+                transform: translate(-34%,-45%);
+                overflow: hidden;
+                h1{
+                    font-family: 'Cinzel Decorative', cursive;
+                    font-size: 2.6rem;
+                    font-weight: 400;
+                    letter-spacing: 0.2em;
+                }
+                p{
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 1.3rem;
+                    font-weight: 300;
+                    display: flex;
+                    letter-spacing: 0.2em;
+                    margin-left: 2rem;
+                }
+            }
+    
+            .category-name{
+                position: absolute;
+                left: 38%;
+                top: 75%;
+                transform: translate(-38%,-75%);
+                color: white;
+                h4{
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                    letter-spacing: 0.1em;
+                }
+                p{
+                    font-size: 0.7rem;
+                    letter-spacing: 0.1em;
+                    font-weight: 200;
+                    margin-top: 0.5rem;
+                }
+            }
+    
+            .collection-brief{
+                position: absolute;
+                right: 27%;
+                bottom: 15%;
+                transform: translate(-27%,-15%);
+                color: white;
+                p{
+                    font-size: 0.6rem;
+                    letter-spacing: 0.1em;
+                    font-weight: 200;
+                    margin-top: 0.5rem;
+                    line-height: 1.8;
+                }
             }
         }
     }
 }
+
 
 @keyframes rotation {
     from {

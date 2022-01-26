@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState} from "react";
 import { Routes, Route } from "react-router-dom"; 
 
 import Navbar from "./components/navbar/navbar";
@@ -9,7 +9,6 @@ import CollectionsPage from "./pages/Collections/collections";
 import AboutPage from "./pages/About/about";
 import ProductItem from "./components/productItem/productItem";
 import CategoryItem from "./components/categoryItem/categoryItem";
-import FeaturesSection from "./components/features/features";
 import Loader from "./components/loader/loader";
 
 function App() {
@@ -26,7 +25,7 @@ function App() {
     <>
     {loading ? <Loader/> : <>
       <Navbar/>
-      <Routes>
+      <Routes >
         <Route path="/" element = {<HomePage/>} />
         <Route path="/eshop" element = {<EshopPage/>} />
         <Route path="/eshop/:categoryId/:productId" element={<ProductItem/>} />

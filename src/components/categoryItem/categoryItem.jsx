@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect } from "react";
 import { useParams,Link} from "react-router-dom";
+
+import { gsap,Power3 } from "gsap";
 
 import './categoryItem.scss'
 
@@ -11,6 +13,11 @@ const CategoryItem = () => {
     const [categoryName, setCategoryName] = useState('')
     const [details,setDetails] = useState([])
     const [categoryNames, setCategoryNames] = useState([])
+
+    let tl = new gsap.timeline()
+    useLayoutEffect(()=>{
+        tl.from('.category-images',1.5,{opacity: 0,y:500,ease: Power3.easeInOut })
+    },[])
 
     useEffect(() => {
         const{categoryId} = params

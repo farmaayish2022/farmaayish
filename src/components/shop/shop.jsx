@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useLayoutEffect,useEffect,useRef} from "react";
+import { gsap,Power3 } from "gsap";
 
 import './shop.scss'
 
@@ -7,6 +8,12 @@ import FeaturesSection from "../features/features";
 import SHOP_DATA from "../../data";
 
 const ShopPage = () => {
+
+    let tl = new gsap.timeline()
+    useLayoutEffect(()=>{
+        tl.from('.shop-heading',1,{opacity: 0,y:50,ease: Power3.easeOut },0.2)
+        .from('.items-preview',1,{x: 200, opacity: 0,ease: Power3.easeOut })
+    },[])
     
     return(
     <div className="shop">
