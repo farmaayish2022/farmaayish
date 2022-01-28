@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { gsap,Power3,Sine} from "gsap";
+import { gsap,Power3} from "gsap";
 
 import {MenuAlt4Icon} from '@heroicons/react/outline'
 import {XIcon} from '@heroicons/react/outline'

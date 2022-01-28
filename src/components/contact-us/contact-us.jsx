@@ -5,13 +5,14 @@ import './contact-us.scss'
 
 const Contact = () => {
     const ref = useRef(null)
-    let tl = new gsap.timeline()
+    
     useLayoutEffect(()=>{
         if(ref){
+            let tl = new gsap.timeline()
             tl.from('.contact-img',2,{opacity: 0,scale:5 ,ease: Power3.easeOut },0.5)
             .from('.text-input',1,{x: 200, opacity: 0,ease: Power3.easeOut })
         }  
-    },[tl])
+    },[])
     return(
         <>
             <div className="contact">

@@ -14,11 +14,12 @@ const CollectionShowcase = () => {
     
     const d = new Date();
     let year = d.getFullYear();
-    var scroll = null
+    
     let title = useRef(null)
     
     const ref = useRef(null)
     useEffect(()=>{
+        var scroll = null
         if(ref){
             scroll = new LocomotiveScroll({
                 el:ref.current,

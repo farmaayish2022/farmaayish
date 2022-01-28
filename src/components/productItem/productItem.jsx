@@ -15,12 +15,13 @@ const ProductItem = () => {
     const [name, setName] = useState('')
     const [price, setPrice] = useState('')
 
-    let tl = new gsap.timeline()
+    
     useLayoutEffect(()=>{
+        let tl = new gsap.timeline()
         tl.from('.item-img',0.8,{x:700,ease: Power3.easeInOut },0.1)
         .from('.product-desc',1.2,{y:200,opacity:0,skewY:20,ease: Power3.easeOut })
         
-    },[tl])
+    },[])
 
     useEffect(()=>{
         const{categoryId,productId} = params
@@ -37,7 +38,7 @@ const ProductItem = () => {
         setName(details.name)
         setPrice(details.price)
 
-    },[])
+    },[params])
 
     return(
         <div className="product-page">

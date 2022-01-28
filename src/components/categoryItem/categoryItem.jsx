@@ -14,8 +14,8 @@ const CategoryItem = () => {
     const [details,setDetails] = useState([])
     const [categoryNames, setCategoryNames] = useState([])
 
-    let tl = new gsap.timeline()
     useLayoutEffect(()=>{
+        let tl = new gsap.timeline()
         tl.from('.category-images',1.5,{opacity: 0,y:500,ease: Power3.easeInOut })
     },[])
 

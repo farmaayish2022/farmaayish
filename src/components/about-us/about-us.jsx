@@ -10,8 +10,7 @@ const AboutUs = () => {
     const [offsetY, setOffsetY] = useState(0)
     const ref = useRef(null)
     const handleScroll = () => setOffsetY(window.pageYOffset)
-    let tl = new gsap.timeline()
-
+    
     useEffect(() => {
         window.addEventListener('scroll',handleScroll)
         return () => window.removeEventListener('scroll',handleScroll) 
@@ -19,10 +18,11 @@ const AboutUs = () => {
 
     useLayoutEffect(()=>{
         if(ref){
+            let tl = new gsap.timeline()
             tl.from('.about-us-hero-img',1,{y: 1000, opacity: 0,ease: Power3.easeOut })
                 .from('.hero-title',1,{x: 200, opacity: 0,ease: Power3.easeOut })
         }
-    },[tl])
+    },[])
 
     return( 
     <>
