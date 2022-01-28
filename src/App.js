@@ -28,7 +28,7 @@ function App() {
       {loading ? <ScreenLoader/> : 
         <>
           <Navbar/>
-          <Suspense fallback={<h1>hi</h1>}>
+          <Suspense fallback={<h4>Loading...</h4>}>
             <Routes >
                 <Route path="/" element = {<HomePage/>} />
                 <Route path="/eshop" element = {<EshopPage/>} />
