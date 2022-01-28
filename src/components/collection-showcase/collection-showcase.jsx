@@ -2,10 +2,13 @@ import React, { useEffect, useLayoutEffect, useRef} from "react";
 import hoverEffect from 'hover-effect'
 import LocomotiveScroll from 'locomotive-scroll'
 import { gsap,Power3,Power4 } from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
 import './collection-showcase.scss'
 
 import {ReactComponent as CircleSvg} from './Circle.svg';
+
+gsap.registerPlugin(ScrollTrigger)
 
 const CollectionShowcase = () => {
     
@@ -13,7 +16,7 @@ const CollectionShowcase = () => {
     let year = d.getFullYear();
     var scroll = null
     let title = useRef(null)
-    let tl = new gsap.timeline()
+    
     const ref = useRef(null)
     useEffect(()=>{
         if(ref){
@@ -26,25 +29,31 @@ const CollectionShowcase = () => {
         return () => {if (scroll) scroll.destroy()}
     },[])
 
-    // useEffect(()=>{
+    useEffect(()=>{
         
-    //     const scrollContainer = document.querySelector('.collection-showcase')
-    //     scrollContainer.addEventListener('wheel',(evt) => {
-    //         evt.preventDefault()
-    //         scrollContainer.scrollLeft += evt.deltaY
-    //     })
-    //     return () => window.removeEventListener('wheel', (evt) => {
-    //         evt.preventDefault()
-    //         scrollContainer.scrollLeft += evt.deltaY
-    //     })
+        const scrollContainer = document.querySelector('.collection-showcase')
+        scrollContainer.addEventListener('wheel',(evt) => {
+            evt.preventDefault()
+            scrollContainer.scrollLeft += evt.deltaY
+        })
+        return () => window.removeEventListener('wheel', (evt) => {
+            evt.preventDefault()
+            scrollContainer.scrollLeft += evt.deltaY
+        })
 
-    // },[])
+    },[])
 
     useLayoutEffect(()=>{
-        tl
-        .from(title,2,{y: 300, opacity: 0, ease: Power3.easeOut },0.5)
-        .from('.collection-brief', 2 ,{y:500, skewY: 20, ease: Power4.easeOut},0.3)
-        .from('.category-name',4,{x: -300, opacity:0, ease: Power3.easeOut},0.4)
+        if(ref){
+            let tl = new gsap.timeline({
+                scrollTrigger: '.heading',
+                scrub: 1
+            })
+            tl
+            .from(title,2,{y: 300, opacity: 0, ease: Power3.easeOut },0.5)
+            .from('.collection-brief', 2 ,{y:500, skewY: 20, ease: Power4.easeOut},0.3)
+            .from('.category-name',4,{x: -300, opacity:0, ease: Power3.easeOut},0.4)
+        }  
     },[])
 
     useEffect(()=>{

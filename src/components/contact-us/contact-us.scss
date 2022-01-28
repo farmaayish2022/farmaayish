@@ -2,11 +2,12 @@
     width: 100vw;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 
     .contact-img{
         width: 100%;
         height: 100%;
-        background-image: url("https://i.ibb.co/ypXWjfm/Get-in-touch.webp");
+        background-image: url("https://i.ibb.co/kc3h1bL/Contact-Us.webp");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -79,7 +80,7 @@
             letter-spacing: 0.1em;
             margin-top: 1rem;
             cursor: pointer;
-            transition: border-bottom 0.5s cubic-bezier(0.68,-0.55,0.27,1.55);
+            transition: 0.3s ease-in;
             &:hover{
                 border-bottom: 1px solid white ;
             }

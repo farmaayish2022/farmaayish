@@ -1,4 +1,4 @@
-import React,{useLayoutEffect,useEffect,useRef} from "react";
+import React,{useLayoutEffect} from "react";
 import { gsap,Power3 } from "gsap";
 
 import './shop.scss'
@@ -30,7 +30,6 @@ const ShopPage = () => {
         </div>
         
         <FeaturesSection/>
-
     </div>
     )
 }

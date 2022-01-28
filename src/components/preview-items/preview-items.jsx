@@ -34,4 +34,4 @@ const ItemsPreview = ({title,items}) => {
     )
 }
 
-export default ItemsPreview
+export default React.memo(ItemsPreview) 

@@ -1,0 +1,60 @@
+.loader{
+    .bg{
+        width: 100vw;
+        height: 100vh;
+        background-color: #FFB686;
+        z-index: 500;
+        position: fixed;
+        left: 0;
+        top: 0;
+        .title{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+            h1{
+                font-family: 'Cinzel Decorative';
+                font-size: 3.5rem;
+                color: white;
+                font-weight: 700;
+                letter-spacing: 0.2em;
+            }
+        }
+        .sub-heading{
+            position: absolute;
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%,-60%);
+            overflow: hidden;
+            p{
+                font-family: 'Poppins', sans-serif;
+                font-size: 1rem;
+                color: black;
+                font-weight: 400;
+                letter-spacing: 0.2em;
+                text-align: center;
+            }
+        }
+        
+    } 
+}
+
+@media screen and (max-width: 500px){
+    .loader{
+        .bg{
+            .title{
+                h1{
+                    font-size: 2rem;
+                }
+            }
+            .sub-heading{
+                p{
+                    font-size: 0.78rem;
+                    letter-spacing: 0;
+                }
+                
+            }
+        }
+    }
+}

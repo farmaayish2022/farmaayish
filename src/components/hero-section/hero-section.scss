@@ -7,10 +7,11 @@
     .hero-img {
         width: 100%;
         height: 100%;
-        background-image: url("https://i.ibb.co/hCY5szQ/Hero-section-bg.webp");
+        background-image: url("https://i.ibb.co/P1njsmx/Hero-bg.webp");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+        filter: brightness(80%);
         position: absolute;
         top: 0;
         left: 0;
@@ -20,23 +21,27 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 25%;
-        left: 7% ;
+        top: 45%;
+        left: 15% ;
         z-index: 2;
         color: white;
+        transform: translate(-15%,-45%);
 
         .title{
             font-family: 'Noto Serif Display', serif;
             font-style: italic;
-            font-size: 5em;
+            font-size: 5rem;
             letter-spacing: 0.025em;
         }
 
         p{
             font-weight: 300;
-            font-size: 1.2em;
-            color: #FFF3CE;
+            font-size: 1.2rem;
+            color: #ffebcd;
             margin-top: 2rem;
+            line-height: 2;
+            letter-spacing: 0.08em;
+            text-shadow: 5px 3px 10px rgb(165, 165, 165);
         }
     }
 
@@ -53,13 +58,13 @@
         align-items: center;
 
         p{
-            font-size: 1.1em;
+            font-size: 1.1rem;
             font-weight: 400;
             // letter-spacing: 0.025em;
         }
 
         .discover-icon{
-            width: 2em;
+            width: 2rem;
             animation: scroll 1s ease-in-out 1s infinite alternate;
         }
 
@@ -72,3 +77,65 @@
     }
 }
 
+@media screen and (max-width: 800px){
+    .hero-section{
+        .content{
+            .title{
+                font-size: 3.7rem;
+            }
+            p{
+                font-size: 1.2rem;
+                line-height: 1.8;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 570px){
+    .hero-section{
+        .content{
+            .title{
+                font-size: 2.9rem;
+            }
+            p{
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+        }
+        .discover{
+            p{
+                font-size: 0.8rem;
+            }
+            .discover-icon{
+                width: 1.5rem ;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px){
+    .hero-section{
+        .content{
+            .title{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 0.8rem;
+                line-height: 1.8;
+            }
+        }
+    }
+}
+@media screen and (max-width: 385px){
+    .hero-section{
+        .content{
+            .title{
+                font-size: 2rem;
+            }
+            p{
+                font-size: 0.8rem;
+                line-height: 1.8;
+            }
+        }
+    }
+}

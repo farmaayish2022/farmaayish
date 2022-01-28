@@ -1,12 +1,14 @@
-import React, { useEffect, useState, useLayoutEffect } from "react";
+import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
 import { gsap,Power3 } from "gsap";
 
 import './about-us.scss'
 
 import FeaturesSection from "../features/features";
+import Footer from "../footer/footer";
 
 const AboutUs = () => {
     const [offsetY, setOffsetY] = useState(0)
+    const ref = useRef(null)
     const handleScroll = () => setOffsetY(window.pageYOffset)
     let tl = new gsap.timeline()
 
@@ -16,16 +18,18 @@ const AboutUs = () => {
     },[])
 
     useLayoutEffect(()=>{
-        tl.from('.about-us-hero-img',1,{y: 1000, opacity: 0,ease: Power3.easeOut })
-        .from('.hero-title',1,{x: 200, opacity: 0,ease: Power3.easeOut })
-    },[])
+        if(ref){
+            tl.from('.about-us-hero-img',1,{y: 1000, opacity: 0,ease: Power3.easeOut })
+                .from('.hero-title',1,{x: 200, opacity: 0,ease: Power3.easeOut })
+        }
+    },[tl])
 
     return( 
     <>
     <section className="about-us">
         <section className="about-us-hero-section" style={{transform: `translateY(-${offsetY*0.9}px)`}}>
 
-            <div className="about-us-hero-img"></div> 
+            <div className="about-us-hero-img" ref={ref}></div> 
 
             <h1 className="hero-title">ABOUT US</h1>
 
@@ -63,8 +67,16 @@ const AboutUs = () => {
         </section>
 
         <section className="about-us-packaging">
-            <h1>CUSTOMISED PACKAGING FOR <br/> THE UNIQUE YOU!</h1>
-            <div className="packaging-img"></div>
+            <div className="packaging-img">
+                <div className="customised"><h1>CUSTOMISED PACKAGING FOR EVERY PRODUCT</h1></div>
+                <img src="https://i.ibb.co/jkMtrS0/Coral-Box-Mockup.jpg" alt="coral-box" />
+            </div>
+            <div className="packaging-img">
+                <img src="https://i.ibb.co/phxPd5b/Bag-mockup.jpg" alt="bag-mockup" />
+            </div>
+            <div className="packaging-img">
+                <img src="https://i.ibb.co/t3b6DJp/Lavender-box-mockup.jpg" alt="lavendar-box" />
+            </div>
             <p>Curabitur risus est, porta non molestie at, pharetra et ligula.vehicula id dui non posuere. Praesent vel neque<br/>
                 Duis orci ex, sodales congue nisl vitae, lobortis finibus dolor.Nullam finibus orci eu velit pulvinar<br/>
                 Vestibulum sed mauris sed tellus porttitor feugiat.Aliquam nec dui porta, accumsan quam non</p>
@@ -72,6 +84,7 @@ const AboutUs = () => {
     </section>
 
     <FeaturesSection/>
+    <Footer/>
     </>
     
     )

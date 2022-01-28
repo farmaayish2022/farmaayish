@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {Scrollbar} from 'swiper';
+import {gsap,Power3} from 'gsap'
+import { ScrollTrigger } from "gsap/all";
 
 import "swiper/scss";
 import "swiper/scss/scrollbar"
@@ -11,10 +13,11 @@ import './new-arrivals.scss'
 import SHOP_DATA from "../../data";
 import ItemCard from "../item-card/item-card";
 
-
+gsap.registerPlugin(ScrollTrigger)
 SwiperCore.use([Scrollbar]);
 
 const NewArrivals = () => {
+    const ref = useRef(null)
     const [categoryName, setCategoryName] = useState('Rings')
     const [detail, setDetail] = useState([])
 
@@ -28,9 +31,23 @@ const NewArrivals = () => {
         setDetail(details.items)
 
     },[categoryName])
+
+    useLayoutEffect(()=>{
+        if(ref){
+            let tl = gsap.timeline({
+                scrollTrigger:{
+                    trigger: '.new-arrivals',
+                    }
+                })
+                tl.from('.headings',
+                    {duration:2,stagger:0.3,opacity: 0,y:-50,skewY:7,ease: Power3.easeOut })
+                    .from('.categories',{duration: 1.5,opacity:0,x:-100,ease: Power3.easeOut},1)
+                    .from('.item-info',{duration: 1,opacity:0,x:500,ease: Power3.easeOut},1)
+        }
+    },[])
     
     return(
-        <div className="new-arrivals">
+        <div className="new-arrivals" ref={ref}>
 
             <div className="headings">
                 <p>EXPLORE</p>

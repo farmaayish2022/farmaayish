@@ -11,7 +11,7 @@
         .about-us-hero-img {
             width: 100%;
             height: 100%;
-            background-image: url("https://i.ibb.co/4sHtPH0/About-us-cover.webp");
+            background-image: url("https://i.ibb.co/5264kmT/About-us-cover.webp");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -122,7 +122,7 @@
       .value-img{
         width: 100%;
         height: 100%;
-        background-image: url("https://i.ibb.co/pQT5f5w/Value-image.webp");
+        background-image: url("https://i.ibb.co/Cvz2n0q/Brand-image.webp");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -154,36 +154,50 @@
 
     .about-us-packaging{
       width: 100vw;
-      height: 150vh;
+      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-around;
       padding: 2rem 0;
+      padding-top: 0;
       
-      h1{
-        font-family: 'Cinzel Decorative', cursive;
-        line-height: 2;
-        font-weight: 700;
-        font-size: 2em;
-        text-align: center;
-        letter-spacing: 0.09em;
-      }
+      // h1{
+      //   font-family: 'Poppins', sans-serif !important;
+      //   line-height: 2;
+      //   font-weight: 600;
+      //   margin-bottom: 1.2rem;
+      //   text-transform: uppercase;
+      //   font-size: 2em;
+      //   text-align: center;
+      //   letter-spacing: 0.09em;
+      //   color: rgb(240, 156, 60);
+      // }
 
       .packaging-img{
-        width: 80%;
-        height: 60%;
-        background-image: url('https://i.ibb.co/3fSrbFZ/Packaging-wide.webp');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        margin: 1.2rem 0;
-        transition: all 0.2s ease-out;
-        transform: scale(0.8);
-
-        &:hover{
-          transform: scale(1);
-          filter: saturate(150%);
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+        h1{
+          font-family: 'Poppins', sans-serif !important;
+          line-height: 1.3;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          font-size: 2vw;
+          text-align: center;
+          position: absolute;
+          left: 50%;
+          top: 10%;
+          transform: translate(-50%,-10%);
+          color: white;
         }
       }
 

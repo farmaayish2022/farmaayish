@@ -44,7 +44,7 @@
         position: absolute;
         right: 38%;
         top: 20%;
-        transform: translate(-38%,-20%);
+        // transform: translate(-38%,-20%);
         width: 4rem;
         font-weight: 200;
         animation: rotation 10s infinite linear;
@@ -70,9 +70,9 @@
                 height: 30rem;
                 overflow: hidden;
                 position: absolute;
-                top: 40%;
+                top: 30%;
                 left: 50%;
-                transform: translate(-50%,-40%);
+                transform: translate(-50%,-30%);
                 -webkit-clip-path: inset(1px round 13rem 13rem 13rem 13rem);
                 clip-path: inset(1px round 13rem 13rem 13rem 13rem);
                 img{
@@ -97,8 +97,8 @@
                 color: #FFD8BA;
                 position: absolute;
                 left: 34%;
-                top: 45%;
-                transform: translate(-34%,-45%);
+                top: 40%;
+                transform: translate(-34%,-40%);
                 overflow: hidden;
                 h1{
                     font-family: 'Cinzel Decorative', cursive;
@@ -119,8 +119,8 @@
             .category-name{
                 position: absolute;
                 left: 38%;
-                top: 75%;
-                transform: translate(-38%,-75%);
+                top: 70%;
+                transform: translate(-38%,-70%);
                 color: white;
                 h4{
                     font-size: 0.9rem;
@@ -138,8 +138,8 @@
             .collection-brief{
                 position: absolute;
                 right: 27%;
-                bottom: 15%;
-                transform: translate(-27%,-15%);
+                bottom: 25%;
+                // transform: translate(-27%,-25%);
                 color: white;
                 p{
                     font-size: 0.6rem;
@@ -161,4 +161,128 @@
     to {
             transform: rotate(359deg);
     }
+}
+
+@media screen and (max-width: 1000px){
+    .static-elements{
+        .circle-svg{
+            right: 23%;
+        }
+        .collection-showcase{
+            .collection-category{
+                .collection-brief{
+                    right: 10%;
+                }
+                .category-name{
+                    left: 30%;
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 700px){
+    .static-elements{
+        .bottom-links{
+            padding: 0 2rem 0 2rem;
+        }
+        .circle-svg{
+            right: 23%;
+        }
+        .company-name{
+            left: 23%;
+        }
+        .collection-showcase{
+            .collection-category{
+                .heading{
+                    left: 27%;
+                    h1{
+                        font-size: 2rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+                .image-frame{
+                    width: 16rem;
+                    height: 25rem;
+                }
+                .collection-brief{
+                    right: 2%;
+                    p{
+                        font-size: 0.5rem;
+                    }
+                }
+                .category-name{
+                    left: 28%;
+                    h4{
+                        font-size: 0.7rem;
+                    }
+                    p{
+                        font-size: 0.5rem ;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 500px){
+    .static-elements{
+        .bottom-links{
+            padding: 0 1rem 0 1rem;
+            p{
+                font-size: 0.6rem;
+            }
+        }
+        .circle-svg{
+            right: 20%;
+        }
+        .company-name{
+            left: 18%;
+            h4{
+                font-size: 0.7rem;
+            }
+            p{
+                font-size: 0.58rem;
+            }
+        }
+        .collection-showcase{
+            .collection-category{
+                .heading{
+                    left: 22%;
+                    h1{
+                        font-size: 1.5rem;
+                    }
+                    p{
+                        font-size: 0.8rem;
+                    }
+                }
+                .image-frame{
+                    width: 13rem;
+                    height: 20rem;
+                }
+                .collection-brief{
+                    right: 3%;
+                    bottom: 40%;
+                    p{
+                        font-size: 0.45rem;
+                    }
+                }
+                .category-name{
+                    left: 29%;
+                    top: 60%;
+                    h4{
+                        font-size: 0.8rem;
+                    }
+                    p{
+                        font-size: 0.5rem ;
+                    }
+                }
+            }
+        }
+    }
+    
 }

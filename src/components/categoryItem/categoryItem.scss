@@ -16,6 +16,10 @@
             font-weight: 300;
             letter-spacing: 0.09em;
             cursor: pointer;
+            transition: 0.27s;
+            &:hover{
+                color: rgb(240, 141, 60);
+            }
         }
     }
 

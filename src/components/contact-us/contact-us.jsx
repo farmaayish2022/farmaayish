@@ -1,18 +1,21 @@
-import React,{useLayoutEffect} from "react";
+import React,{useLayoutEffect, useRef} from "react";
 import { gsap,Power3 } from "gsap";
 
 import './contact-us.scss'
 
 const Contact = () => {
+    const ref = useRef(null)
     let tl = new gsap.timeline()
     useLayoutEffect(()=>{
-        tl.from('.contact-img',2,{opacity: 0,scale:5 ,ease: Power3.easeOut },0.5)
-        .from('.text-input',1,{x: 200, opacity: 0,ease: Power3.easeOut })
-    },[])
+        if(ref){
+            tl.from('.contact-img',2,{opacity: 0,scale:5 ,ease: Power3.easeOut },0.5)
+            .from('.text-input',1,{x: 200, opacity: 0,ease: Power3.easeOut })
+        }  
+    },[tl])
     return(
         <>
             <div className="contact">
-                <div className="contact-img"></div>
+                <div className="contact-img" ref={ref}></div>
                 <div className="contact-form">
                     <form action="">
                         <div className="text-input">

@@ -20,9 +20,18 @@
         font-weight: 700;
         color: white;
         letter-spacing: 0.09em;
+        transition: 0.3s;
+
+        &:hover{
+            color: #fa9145;
+        }
 
         &.active{
             color: black;
+            transition: 0.3s;
+            &:hover{
+                color: #fa9145;
+            }
         }
     }
 
@@ -36,7 +45,75 @@
             font-weight: 400;
             margin-left: 2rem;
             color: white;
+            position: relative;
+            
+            &::after{
+                content: "";
+                position: absolute;
+                background-color: #ca661e;
+                height: 2px;
+                width: 0;
+                left: 0;
+                bottom: -10px;
+                transition: 0.3s;
+            }
 
+            &:hover:after{
+                width: 100%;
+            }
+
+            &.active{
+                color: black;
+            }
+        }
+    }
+
+    .menu-icon{
+        width: 1.5rem;
+        color: white;
+        display: none;
+        z-index: 101;
+        cursor: pointer;
+        &.active{
+            color: black;
+        }
+    }
+}
+
+@media screen and (max-width: 780px){
+    .navbar{
+        padding: 0.8rem 2rem;
+        .logo{
+            z-index: 101;
+            font-size: 0.9rem;
+        }
+        .links{
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%,0);
+            flex-direction: column;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: #793300;
+            display: none;
+            transition: all 2s ease-out;
+            a{
+                margin-bottom: 2rem;
+                font-size: 2.2rem;
+                color: #FFD9BD;
+                &.active{
+                    color: #FFD9BD;
+                }
+            }
+            &.active{
+                display: flex;
+            }
+        }
+
+        .menu-icon{
+            display: block;
             &.active{
                 color: black;
             }
