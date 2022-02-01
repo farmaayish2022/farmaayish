@@ -49,8 +49,7 @@ const Navbar = () => {
             <div className={navbar ? 'menu-icon active' : 'menu-icon'} onClick=
                 {()=>{setClick(!click)
                     setMobile(!mobile)
-                    let tl = gsap.timeline()
-                    tl.from('.links',{ y:-800, duration:0.01, ease:Power3.easeOut},"-=4")
+                    gsap.from('.links',0.9,{y:-600,ease: Power3.easeOut});
                 }}>
                 {click ? <XIcon /> : <MenuAlt4Icon/>}
             </div>

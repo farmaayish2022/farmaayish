@@ -7,8 +7,9 @@
 
     h1{
         font-weight: 600;
-        font-size: 2rem;
+        font-size: 4rem;
         margin-bottom: 1rem;
+        line-height: 1.2;
     }
 
     .collections{
@@ -79,6 +80,9 @@
 }
 @media screen and (max-width: 640px){
     .collection2{
+        h1{
+            font-size: 2.7rem;
+        }
         height: 80vh;
         .collections{
             flex-direction: column;

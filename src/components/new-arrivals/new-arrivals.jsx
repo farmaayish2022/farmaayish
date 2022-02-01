@@ -63,7 +63,7 @@ const NewArrivals = () => {
                     <p onClick={() => setCategoryName('Bracelets')}>BRACELETS</p>
                 </div>
                 <div className="item-info">
-                    <Swiper scrollbar={{"hide": true}} slidesPerView={4} className="mySwiper" breakpoints={{"200": {"slidesPerView": 1,"spaceBetween": 50},"420": {"slidesPerView": 1,"spaceBetween": 50},"640": {"slidesPerView": 2,"spaceBetween": 50},"768": {"slidesPerView": 3,"spaceBetween": 55},"1024": {"slidesPerView": 4,"spaceBetween": 30}}}>
+                    <Swiper scrollbar={{"hide": true}} modules={[Scrollbar]} slidesPerView={4} className="mySwiper" breakpoints={{"200": {"slidesPerView": 1,"spaceBetween": 50},"420": {"slidesPerView": 2,"spaceBetween": 50},"640": {"slidesPerView": 2,"spaceBetween": 50},"768": {"slidesPerView": 3,"spaceBetween": 55},"1024": {"slidesPerView": 4,"spaceBetween": 30}}}>
                         {detail.map(item => (
                            
                             <SwiperSlide key={item.id} >
@@ -74,6 +74,7 @@ const NewArrivals = () => {
                         ))}
                     </Swiper>
                 </div>
+                <div className="swipe-left"><p>Swipe &#8594;</p></div>
             </div>
         </div>
     )

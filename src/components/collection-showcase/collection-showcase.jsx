@@ -14,10 +14,9 @@ const CollectionShowcase = () => {
     
     const d = new Date();
     let year = d.getFullYear();
-    
     let title = useRef(null)
-    
     const ref = useRef(null)
+
     useEffect(()=>{
         var scroll = null
         if(ref){

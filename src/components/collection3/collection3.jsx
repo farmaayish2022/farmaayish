@@ -13,11 +13,10 @@ const Collection3 = () => {
             let tl = gsap.timeline({
                 scrollTrigger:{
                     trigger: '.collection3',
-                    scrub: 1
                     }
                 })
-                tl.from('#pic1',2,{opacity: 0,y:-500,ease: Power3.easeOut })
-                tl.from('#pic2',1,{opacity: 0,x:-500,ease: Power3.easeOut },0.5)
+                tl.from('#pic1',0.9,{opacity: 0,y:-500,ease: Power3.easeOut })
+                tl.from('#pic2',0.9,{opacity: 0,x:-500,ease: Power3.easeOut },0.5)
         }
     },[])
     return(

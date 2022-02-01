@@ -13,11 +13,11 @@ const Collection1 = () => {
         if(ref){
             let tl = gsap.timeline({
                 scrollTrigger:{
-                    trigger: '.collection1',
+                    trigger: '.collection1'
                     }
                 })
-                tl.from('.harmony',{duration:1.2,opacity: 0,y:-300,skewY:7,ease: Power3.easeOut },0.5)
-                .from('.mystique',{duration:1,opacity: 0,y:500,skewY:-7,ease: Power3.easeOut },0.2)
+                tl.from('.harmony',{duration:1.7,opacity: 0,y:-300,skewY:7,ease: Power3.easeOut })
+                .from('.mystique',{duration:1.3,opacity: 0,y:500,skewY:-7,ease: Power3.easeOut },0.5)
 
         }
     },[])

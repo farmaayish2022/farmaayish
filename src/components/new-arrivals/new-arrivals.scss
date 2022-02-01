@@ -11,9 +11,8 @@
         flex-direction: column;
 
         h1{
-            font-size: 2.8em;
+            font-size: 6rem;
             letter-spacing: 0.07em;
-            margin-top: 0.05em;
             font-weight: 600;
         }
     }
@@ -21,7 +20,7 @@
     .items{
         display: flex;
         flex-direction: column;
-        margin-top: 2rem;
+        margin-top: 1rem;
 
         .categories{
             display: flex;
@@ -53,7 +52,7 @@
                 text-align: center;
                 font-size: 18px;
                 background-color: #FFFCF4;
-                flex: 1;
+                // flex: 1;
                 margin-right: 2rem;
               
                 /* Center slide text vertically */
@@ -82,6 +81,15 @@
                 object-fit: cover;
               }
         }
+
+        .swipe-left{
+            p{
+                font-size: 1.5rem;
+                font-weight: 500;
+                text-transform: uppercase;
+                letter-spacing: 0.09em;
+            }
+        }
     }
 
 }
@@ -90,11 +98,21 @@
     .new-arrivals{
         height: 60%;
         padding: 1rem 3rem;
+        .headings{
+            h1{
+                font-size: 4rem;
+            }
+        }
     }
 }
 
 @media screen and (max-width: 640px){
     .new-arrivals{
+        .headings{
+            h1{
+                font-size: 3rem;
+            }
+        }
         .items{
             margin-top: 1rem;
             .categories{
@@ -112,7 +130,8 @@
         padding: 1rem 2rem;
         .headings{
             h1{
-                font-size: 2em;
+                font-size: 3rem;
+                line-height: 1.2;
             }
             p{
                 font-size: 0.8rem;
@@ -132,7 +151,7 @@
     .new-arrivals{
         .headings{
             h1{
-                font-size: 1.8em;
+                font-size: 2rem;
             }
             p{
                 font-size: 0.7rem;

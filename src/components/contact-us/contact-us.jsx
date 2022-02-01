@@ -21,23 +21,23 @@ const Contact = () => {
                     <form action="">
                         <div className="text-input">
                             <label>FIRST NAME</label>
-                            <input type="text" placeholder="Enter your first name" />
+                            <input type="text" placeholder="Enter your first name" required />
                         </div>
                         <div className="text-input">
                             <label>LAST NAME</label>
-                            <input type="text" placeholder="Enter your last name" />
+                            <input type="text" placeholder="Enter your last name" required />
                         </div>
                         <div className="text-input">
                             <label>EMAIL</label>
-                            <input type="text" placeholder="Enter your email id" />
+                            <input type="text" placeholder="Enter your email id" required />
                         </div>
                         <div className="text-input">
                             <label>PHONE NO</label>
-                            <input type="text" placeholder="Enter your phone no." />
+                            <input type="text" placeholder="Enter your phone no." required />
                         </div>
                         <div className="text-input">
                             <label>MESSAGE</label>
-                            <input type="text" placeholder="Enter your message" />
+                            <input type="text" placeholder="Enter your message" required />
                         </div>
                     </form>
                     <button>Submit    &#8594;</button>

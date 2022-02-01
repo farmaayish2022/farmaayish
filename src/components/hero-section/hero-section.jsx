@@ -15,23 +15,28 @@ const HeroSection = () => {
         }
     },[])
     return(
-        <div className="hero-section">
-
-            <div className="hero-img" ref={ref}></div> 
-
-            <div className="content">
-                <h1 className="title">Delivering your <br/>Desires</h1>
-                <p className="perfect">Get the perfect jewellery for the <br/>unique you!</p>
-            </div>
-
-            <div className="discover">
-                <p>DISCOVER</p>
-                <div className="discover-icon">
-                    <ArrowSmDownIcon />
-                </div>
-            </div>
+        <>
         
-        </div>
+             <div className="hero-section">
+
+                <div className="hero-img" id="hero-image" ref={ref}></div> 
+
+                <div className="content">
+                    <h1 className="title">Delivering your <br/>Desires</h1>
+                    <p className="perfect">Get the perfect jewellery for the <br/>unique you!</p>
+                </div>
+
+                <div className="discover">
+                    <p>DISCOVER</p>
+                    <div className="discover-icon">
+                        <ArrowSmDownIcon />
+                    </div>
+                </div>
+
+            </div> 
+        
+        </>
+        
          
     )
     

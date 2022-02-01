@@ -49,11 +49,15 @@
     
                 input{
                     font-family: 'Poppins', sans-serif;
+                    font-weight: 500;
                     background: rgba($color: #fff, $alpha: 0);
                     border: none;
                     outline: none;
                     border-bottom: 1px white solid;
                     height: 2rem;
+                    color: white;
+                    letter-spacing: 0.09em;
+                    font-size: 0.8rem
                 }
     
                 ::placeholder{
@@ -110,6 +114,9 @@
 @media screen and (max-width: 480px) {
     .contact{
         .contact-form{
+            top: 39%;
+            left: 50%;
+            transform: translate(-50%,-39%);
             form{
                 grid-template-columns: repeat(1,1fr);
                 grid-gap: 0.4rem;

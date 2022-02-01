@@ -96,12 +96,14 @@
             justify-content: center;
             width: 100vw;
             height: 100vh;
-            background-color: #793300;
+            background-color: #b9682e;
+            // backdrop-filter: blur(20px) brightness(80%);
             display: none;
-            transition: all 2s ease-out;
+            // transition: all 2s ease-out;
             a{
                 margin-bottom: 2rem;
-                font-size: 2.2rem;
+                font-size: 2rem;
+                margin-right: 1.5rem;
                 color: #FFD9BD;
                 &.active{
                     color: #FFD9BD;

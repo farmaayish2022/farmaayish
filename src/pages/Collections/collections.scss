@@ -1,6 +1,6 @@
 .background{
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     position: relative;
     background: rgb(167, 63, 7);
     background: linear-gradient(60deg, rgba(167, 63, 7,1) 0%, rgba(82,74,66,1) 100%);
@@ -61,6 +61,12 @@
     -webkit-animation: backgroundGradient 5s ease infinite;
     -moz-animation: backgroundGradient 5s ease infinite;
     animation: backgroundGradient 5s ease infinite;
+}
+
+@media screen and (max-width: 500px){
+    .background{
+        all: unset;
+    }
 }
 
 @-webkit-keyframes backgroundGradient {
